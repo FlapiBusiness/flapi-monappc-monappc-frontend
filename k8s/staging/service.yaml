@@ -1,11 +1,11 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: staging-customerName-projectName-frontend-service
-  namespace: staging-customerName-projectName-frontend
+  name: staging-monappc-monappc-frontend-service
+  namespace: staging-monappc-monappc-frontend
 spec:
   ports:
     - port: 3000
       targetPort: 3000
   selector:
-    app: staging-customerName-projectName-frontend
+    app: staging-monappc-monappc-frontend

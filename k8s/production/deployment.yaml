@@ -1,10 +1,10 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: prod-customerName-projectName-frontend-deployment
-  namespace: prod-customerName-projectName-frontend
+  name: prod-monappc-monappc-frontend-deployment
+  namespace: prod-monappc-monappc-frontend
   labels:
-    app: prod-customerName-projectName-frontend
+    app: prod-monappc-monappc-frontend
 spec:
   strategy:
     type: RollingUpdate
@@ -13,15 +13,15 @@ spec:
       maxSurge: 1
   selector:
     matchLabels:
-      app: prod-customerName-projectName-frontend
+      app: prod-monappc-monappc-frontend
   template:
     metadata:
       labels:
-        app: prod-customerName-projectName-frontend
+        app: prod-monappc-monappc-frontend
     spec:
       containers:
-        - name: prod-customerName-projectName-frontend
-          image: corentin35/customerName-projectName-frontend:${TAG_VERSION}
+        - name: prod-monappc-monappc-frontend
+          image: corentin35/monappc-monappc-frontend:${TAG_VERSION}
           imagePullPolicy: Always
           ports:
             - containerPort: 3000

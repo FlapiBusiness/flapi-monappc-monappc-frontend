@@ -1,12 +1,12 @@
 apiVersion: cert-manager.io/v1
 kind: Certificate
 metadata:
-  name: prod-customerName-projectName-frontend-cert
-  namespace: prod-customerName-projectName-frontend
+  name: prod-monappc-monappc-frontend-cert
+  namespace: prod-monappc-monappc-frontend
 spec:
-  secretName: prod-customerName-projectName-frontend-tls
+  secretName: prod-monappc-monappc-frontend-tls
   dnsNames:
-    - example.flapi.org
+    - monappc.flapi.org
   issuerRef:
     name: letsencrypt-production
     kind: ClusterIssuer

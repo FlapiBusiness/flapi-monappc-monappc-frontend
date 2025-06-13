@@ -1,23 +1,23 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: staging-customerName-projectName-frontend-deployment
-  namespace: staging-customerName-projectName-frontend
+  name: staging-monappc-monappc-frontend-deployment
+  namespace: staging-monappc-monappc-frontend
   labels:
-    app: staging-customerName-projectName-frontend
+    app: staging-monappc-monappc-frontend
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: staging-customerName-projectName-frontend
+      app: staging-monappc-monappc-frontend
   template:
     metadata:
       labels:
-        app: staging-customerName-projectName-frontend
+        app: staging-monappc-monappc-frontend
     spec:
       containers:
-        - name: staging-customerName-projectName-frontend
-          image: corentin35/customerName-projectName-frontend:staging-${TAG_VERSION}
+        - name: staging-monappc-monappc-frontend
+          image: corentin35/monappc-monappc-frontend:staging-${TAG_VERSION}
           imagePullPolicy: Always
           ports:
             - containerPort: 3000
